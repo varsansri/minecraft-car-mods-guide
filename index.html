@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Minecraft Luxury & Sports Car Mods Guide — Best Vehicle Mods 2024 — DTB Academy</title>
+<meta name="description" content="Complete guide to Minecraft luxury and sports car mods. Best vehicle mods, Lamborghini, Ferrari, Bugatti in Minecraft. Installation tips, mod packs, Forge vs Fabric.">
+<meta name="keywords" content="minecraft car mods, minecraft vehicle mods, minecraft luxury cars, minecraft sports cars, Immersive Vehicles, MTS mod, minecraft Lamborghini, minecraft Ferrari">
+<link rel="canonical" href="https://varsansri.github.io/minecraft-car-mods-guide/">
+<meta property="og:title" content="Minecraft Luxury & Sports Car Mods — Complete Guide 2024">
+<meta property="og:description" content="Best Minecraft vehicle mods with Lamborghini, Ferrari, Bugatti and more. Filter by type, see features and install guides.">
+<meta property="og:type" content="website">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebApplication",
+  "name": "Minecraft Luxury & Sports Car Mods Guide",
+  "url": "https://varsansri.github.io/minecraft-car-mods-guide/",
+  "description": "Interactive guide to Minecraft vehicle mods featuring luxury and sports cars",
+  "applicationCategory": "GameApplication",
+  "operatingSystem": "Any",
+  "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {"@type":"Question","name":"What is the best Minecraft car mod?","acceptedAnswer":{"@type":"Answer","text":"The best overall Minecraft car mod is Immersive Vehicles (MTS) by Flansmod/Turbo4. It supports add-on packs with hundreds of real car models including Lamborghinis, Ferraris, and BMWs. It works with Forge on MC 1.12.2 through 1.20+."}},
+    {"@type":"Question","name":"Can you drive a Lamborghini in Minecraft?","acceptedAnswer":{"@type":"Answer","text":"Yes! With the Immersive Vehicles mod + the Supercar Pack add-on, you can drive a Lamborghini Aventador, Huracán, Urus, and more in Minecraft. The cars have custom sounds, speedometers, and working headlights."}},
+    {"@type":"Question","name":"Does the car mod work with Fabric?","acceptedAnswer":{"@type":"Answer","text":"Most major Minecraft car mods (Immersive Vehicles, Flan's Mod) are Forge-only. However, some mods like Vehicular and Create: Steam 'n' Rails have Fabric versions. Always check the mod's CurseForge or Modrinth page for loader compatibility."}},
+    {"@type":"Question","name":"How do I install Minecraft car mods?","acceptedAnswer":{"@type":"Answer","text":"1. Install Minecraft Forge for your MC version. 2. Download the mod .jar file from CurseForge or Modrinth. 3. Place the .jar in your .minecraft/mods folder. 4. For Immersive Vehicles, also download car pack .jar files separately. 5. Launch Minecraft with the Forge profile."}},
+    {"@type":"Question","name":"What Minecraft version has the most car mods?","acceptedAnswer":{"@type":"Answer","text":"Minecraft 1.12.2 still has the most car mod support due to Flan's Mod and early Immersive Vehicles versions. However, 1.16.5 and 1.18.2 have the best balance of modern features and mod availability. 1.20+ support is growing rapidly."}}
+  ]
+}
+</script>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --bg:#0a0a0f;--surface:#111118;--border:rgba(255,255,255,0.08);
+  --text:#efefef;--muted:#6b6b80;--radius:14px;--accent:#f5a623;
+}
+body{background:var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;min-height:100vh;padding-bottom:60px;}
+.wrap{max-width:520px;margin:0 auto;padding:16px 12px}
+.header{text-align:center;padding:20px 0 16px}
+.logo{display:inline-block;background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.3);color:#f5a623;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:5px 16px;border-radius:20px;margin-bottom:12px;}
+h1{font-size:clamp(20px,6vw,28px);font-weight:800;line-height:1.2;margin-bottom:8px}
+.sub{color:var(--muted);font-size:13px}
+
+/* SEARCH + FILTER */
+.controls{display:flex;flex-direction:column;gap:8px;margin-bottom:16px;}
+.search-box{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:10px;padding:10px 14px;
+  color:var(--text);font-size:13px;width:100%;
+  outline:none;
+  transition:border-color .2s;
+}
+.search-box:focus{border-color:rgba(245,166,35,0.4);}
+.search-box::placeholder{color:var(--muted);}
+.filter-row{display:flex;gap:6px;flex-wrap:wrap;}
+.tag-btn{
+  background:var(--surface);border:1.5px solid var(--border);
+  border-radius:8px;padding:6px 12px;font-size:11px;font-weight:700;
+  cursor:pointer;color:var(--muted);transition:all .2s;
+  -webkit-tap-highlight-color:transparent;
+}
+.tag-btn.active{border-color:var(--accent);color:var(--accent);background:rgba(245,166,35,0.08);}
+
+/* MOD CARDS */
+.mods-list{display:flex;flex-direction:column;gap:10px;margin-bottom:20px;}
+.mod-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;transition:border-color .2s;}
+.mod-card:hover{border-color:rgba(255,255,255,0.15);}
+.mod-header{display:flex;gap:12px;align-items:flex-start;padding:14px;}
+.mod-icon{
+  width:48px;height:48px;border-radius:10px;
+  background:rgba(245,166,35,0.1);
+  display:flex;align-items:center;justify-content:center;
+  font-size:22px;flex-shrink:0;
+}
+.mod-info{flex:1;min-width:0;}
+.mod-name{font-size:14px;font-weight:800;margin-bottom:3px;}
+.mod-tagline{font-size:12px;color:var(--muted);margin-bottom:6px;line-height:1.4;}
+.mod-meta{display:flex;gap:6px;flex-wrap:wrap;}
+.meta-pill{
+  font-size:10px;font-weight:700;padding:3px 8px;border-radius:6px;
+  background:rgba(255,255,255,0.05);color:var(--muted);
+}
+.meta-pill.forge{background:rgba(255,107,53,0.12);color:#ff6b35;}
+.meta-pill.fabric{background:rgba(0,212,255,0.10);color:#00d4ff;}
+.meta-pill.free{background:rgba(0,255,136,0.10);color:#00ff88;}
+.meta-pill.popular{background:rgba(245,166,35,0.12);color:#f5a623;}
+.expand-btn{
+  background:none;border:none;color:var(--muted);
+  font-size:20px;cursor:pointer;padding:0 14px 0 0;flex-shrink:0;
+  transition:transform .2s;align-self:center;
+  -webkit-tap-highlight-color:transparent;
+}
+.mod-card.open .expand-btn{transform:rotate(90deg);}
+.mod-detail{
+  display:none;padding:0 14px 14px;
+  border-top:1px solid var(--border);padding-top:12px;
+}
+.mod-card.open .mod-detail{display:block;}
+.detail-section{margin-bottom:10px;}
+.detail-label{font-size:10px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:6px;}
+.car-chips{display:flex;flex-wrap:wrap;gap:5px;}
+.car-chip{
+  font-size:11px;padding:4px 10px;border-radius:6px;
+  background:rgba(245,166,35,0.1);color:#f5a623;font-weight:600;
+}
+.feature-list{display:flex;flex-direction:column;gap:4px;}
+.feature-item{font-size:12px;color:var(--muted);display:flex;gap:6px;align-items:flex-start;line-height:1.4;}
+.feature-item::before{content:'✓';color:#00ff88;flex-shrink:0;margin-top:1px;}
+.mc-versions{display:flex;flex-wrap:wrap;gap:5px;}
+.version-pill{font-size:10px;padding:3px 8px;border-radius:5px;background:rgba(168,85,247,0.10);color:#c084fc;font-weight:700;}
+.install-note{background:rgba(0,212,255,0.05);border:1px solid rgba(0,212,255,0.15);border-radius:8px;padding:10px 12px;font-size:12px;color:#7dd3fc;line-height:1.5;}
+.link-btn{
+  display:inline-flex;align-items:center;gap:6px;
+  background:rgba(245,166,35,0.1);border:1px solid rgba(245,166,35,0.3);
+  color:#f5a623;font-size:12px;font-weight:700;
+  padding:8px 14px;border-radius:8px;text-decoration:none;
+  transition:background .2s;margin-top:10px;
+}
+.link-btn:active{background:rgba(245,166,35,0.2);}
+.count-badge{font-size:10px;color:var(--muted);margin-bottom:12px;}
+
+/* TIPS SECTION */
+.tips-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:16px;margin-bottom:16px;}
+.tips-title{font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted);margin-bottom:12px;}
+.tip-item{display:flex;gap:10px;margin-bottom:10px;align-items:flex-start;}
+.tip-num{
+  width:22px;height:22px;border-radius:50%;
+  background:rgba(245,166,35,0.15);color:#f5a623;
+  font-size:11px;font-weight:800;
+  display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.tip-text{font-size:12px;color:var(--muted);line-height:1.5;}
+
+/* FAQ + SEO */
+.section-label{font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;color:var(--muted);margin:24px 0 12px;}
+.faq-list{display:flex;flex-direction:column;gap:6px;margin-bottom:16px}
+.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;overflow:hidden}
+.faq-item summary{padding:12px 16px;font-size:13px;font-weight:600;cursor:pointer;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--text);-webkit-tap-highlight-color:transparent}
+.faq-item summary::after{content:'›';font-size:18px;color:#f5a623;transition:transform .2s;flex-shrink:0;margin-left:8px}
+.faq-item[open] summary::after{transform:rotate(90deg)}
+.faq-item p{padding:0 16px 12px;font-size:12px;color:var(--muted);line-height:1.6}
+.seo-text{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;margin-bottom:12px}
+.seo-text h2{font-size:14px;font-weight:700;margin-bottom:10px;color:var(--text)}
+.seo-text p{font-size:12px;color:var(--muted);line-height:1.65;margin-bottom:10px}
+.seo-text p:last-child{margin-bottom:0}
+.tg-banner{background:linear-gradient(135deg,rgba(245,166,35,.09),rgba(245,166,35,.03));border:1px solid rgba(245,166,35,.28);border-radius:var(--radius);padding:18px;margin-top:20px;text-align:center;}
+.tg-banner p{font-size:13px;color:var(--muted);margin-bottom:12px;line-height:1.5}
+.tg-banner p strong{color:#f5a623}
+.tg-btn{display:inline-flex;align-items:center;gap:8px;background:#f5a623;color:#000;font-weight:800;font-size:13px;padding:12px 24px;border-radius:9px;text-decoration:none;transition:opacity .2s;}
+.tg-btn:active{opacity:.85}
+footer{text-align:center;margin-top:28px;font-size:11px;color:var(--muted);opacity:.6}
+.hidden{display:none!important;}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header class="header">
+    <div class="logo">DTB Academy</div>
+    <h1>🚗 Minecraft Car Mods</h1>
+    <p class="sub">Luxury & sports cars — complete guide, features & install tips</p>
+  </header>
+
+  <div class="controls">
+    <input type="text" class="search-box" id="searchBox" placeholder="🔍 Search mod or car brand..." oninput="filterMods()">
+    <div class="filter-row" id="filterRow">
+      <button class="tag-btn active" onclick="setFilter('all',this)">All Mods</button>
+      <button class="tag-btn" onclick="setFilter('luxury',this)">Luxury</button>
+      <button class="tag-btn" onclick="setFilter('sports',this)">Sports</button>
+      <button class="tag-btn" onclick="setFilter('supercar',this)">Supercar</button>
+      <button class="tag-btn" onclick="setFilter('realistic',this)">Realistic</button>
+      <button class="tag-btn" onclick="setFilter('pack',this)">Car Packs</button>
+    </div>
+  </div>
+
+  <div class="count-badge" id="countBadge">Showing all 10 mods</div>
+
+  <div class="mods-list" id="modsList">
+    <!-- Built by JS -->
+  </div>
+
+  <div class="tips-card">
+    <div class="tips-title">🔧 Installation Quick Guide</div>
+    <div class="tip-item"><div class="tip-num">1</div><div class="tip-text">Install <strong>Minecraft Forge</strong> for your MC version from files.minecraftforge.net</div></div>
+    <div class="tip-item"><div class="tip-num">2</div><div class="tip-text">Download the mod .jar from <strong>CurseForge</strong> or <strong>Modrinth</strong> — never use unofficial sites</div></div>
+    <div class="tip-item"><div class="tip-num">3</div><div class="tip-text">Place .jar files in <strong>.minecraft/mods/</strong> folder (create it if missing)</div></div>
+    <div class="tip-item"><div class="tip-num">4</div><div class="tip-text">For <strong>Immersive Vehicles</strong>: also download separate car pack .jars and add them to /mods</div></div>
+    <div class="tip-item"><div class="tip-num">5</div><div class="tip-text">Launch Minecraft with the <strong>Forge profile</strong> selected in the launcher</div></div>
+    <div class="tip-item"><div class="tip-num">6</div><div class="tip-text">Craft vehicles using the <strong>Workbench</strong> recipes in-game or use Creative inventory</div></div>
+  </div>
+
+  <section>
+    <div class="section-label">Frequently Asked Questions</div>
+    <div class="faq-list">
+      <details class="faq-item">
+        <summary>What is the best Minecraft car mod in 2024?</summary>
+        <p>Immersive Vehicles (formerly MTS) by Turbo4 is the top choice for 2024. It has an active community, hundreds of add-on car packs, realistic physics, working gauges, lights, and sounds. It supports Minecraft 1.12.2 through 1.20+. For Fabric users, Vehicular or the Create mod ecosystem are solid alternatives.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Can you get a Lamborghini or Ferrari in Minecraft?</summary>
+        <p>Yes! The Supercar Pack add-on for Immersive Vehicles includes Lamborghini Aventador, Lamborghini Huracán, Ferrari 488, Ferrari LaFerrari, Bugatti Chiron, McLaren 720S, and dozens more. Each model has custom engine sounds, working speedometers, and accurate colors. Download the pack from the official MTS Discord or CurseForge.</p>
+      </details>
+      <details class="faq-item">
+        <summary>Do Minecraft car mods work on servers?</summary>
+        <p>Yes, most car mods work on multiplayer servers as long as both the server and all clients have the same mod version installed. Server admins add the mod .jar to the server's mods folder. Immersive Vehicles is especially popular on roleplay and city servers.</p>
+      </details>
+      <details class="faq-item">
+        <summary>What Minecraft version should I use for car mods?</summary>
+        <p>For the widest mod compatibility, use Minecraft 1.12.2 (Forge) if you want the biggest library of car packs, or 1.16.5 / 1.18.2 for a balance of modern features and mod support. 1.20+ versions are gaining support quickly. Avoid very new versions if a specific mod hasn't updated yet.</p>
+      </details>
+      <details class="faq-item">
+        <summary>How do you fuel cars in Minecraft car mods?</summary>
+        <p>In Immersive Vehicles, vehicles run on Biodiesel (crafted from plant matter + buckets) or Aviation Fuel depending on the vehicle type. You fill tanks using a Jerrycan or Fuel Pump. Some add-on packs require specific fuels. The Create mod integration allows automating fuel production with engineering machines.</p>
+      </details>
+    </div>
+    <div class="seo-text">
+      <h2>Best Minecraft Luxury & Sports Car Mods — 2024 Complete Guide</h2>
+      <p>Minecraft vehicle mods have evolved dramatically, with some modern packs delivering near-photorealistic luxury and supercar experiences. From Lamborghini Aventadors to Bugatti Chirons, BMW M-series to Ferrari 488s — the best car mods bring real-world vehicles into Minecraft with working dashboards, engine sounds, headlights, and physics.</p>
+      <p>The Immersive Vehicles (MTS) ecosystem is the gold standard. The base mod provides the vehicle physics engine, while separate add-on packs deliver specific car models. The Supercar Pack, Luxury Cars Pack, JVS Vehicles, and Real Racing Pack collectively add 200+ vehicles. The JVS Luxury Pack specifically targets BMW, Mercedes, Rolls-Royce, Bentley, and Aston Martin enthusiasts.</p>
+      <p>For players who want a complete car experience, pairing Immersive Vehicles with the Better Roads mod creates a proper driving environment. Add Dynmap for a real-time map of your server's road network. The combination turns Minecraft into a surprisingly convincing open-world driving simulator — all completely free and mod-supported.</p>
+    </div>
+  </section>
+
+  <div class="tg-banner">
+    <p>Love free tools and game guides? For <strong>trading signals, money strategies, and daily value</strong> join our Telegram community.</p>
+    <a href="https://t.me/DTB_Academy" target="_blank" rel="noopener noreferrer" class="tg-btn">📊 Join DTB Academy Free →</a>
+  </div>
+  <footer>© DTB Academy · Free tools, no catch</footer>
+</div>
+
+<script>
+const MODS = [
+  {
+    id:'immersive',
+    icon:'🚗',
+    name:'Immersive Vehicles (MTS)',
+    tagline:'The #1 vehicle mod — base framework for 200+ car add-on packs',
+    tags:['all','luxury','sports','supercar','realistic'],
+    loaders:['forge'],
+    free:true,popular:true,
+    versions:['1.12.2','1.16.5','1.18.2','1.19.4','1.20.1'],
+    cars:['Lamborghini Aventador','Ferrari 488','Bugatti Chiron','BMW M5','Audi R8','McLaren 720S','Porsche 911','Rolls-Royce Ghost'],
+    features:[
+      'Realistic vehicle physics — turning radius, weight, suspension',
+      'Working speedometer and fuel gauge HUD',
+      'Engine sounds (unique per vehicle model)',
+      'Working headlights and brake lights',
+      'Passenger seats — carry multiple players',
+      'Add-on pack system — 200+ vehicles available',
+      'Fuel system with Biodiesel/Aviation fuel crafting',
+    ],
+    install:'Install Forge → download Immersive Vehicles base mod + desired car pack .jars → place all in /mods. The base mod alone adds no vehicles — car packs are required.',
+    link:'https://www.curseforge.com/minecraft/mc-mods/mts'
+  },
+  {
+    id:'supercarpack',
+    icon:'🏎️',
+    name:'Supercar Pack (MTS Add-on)',
+    tagline:'Lamborghini, Ferrari, Bugatti, McLaren — full supercar collection',
+    tags:['all','supercar','sports','pack'],
+    loaders:['forge'],
+    free:true,popular:true,
+    versions:['1.12.2','1.16.5','1.18.2','1.20.1'],
+    cars:['Lamborghini Aventador SVJ','Lamborghini Huracán Evo','Ferrari 488 GTB','Ferrari LaFerrari','Bugatti Chiron','Bugatti Veyron','McLaren 720S','Koenigsegg Agera'],
+    features:[
+      '20+ supercar models with accurate proportions',
+      'Unique engine sounds for each model',
+      'Custom color variants (Lamborghini yellow, Ferrari red)',
+      'Working wing/spoiler animations on some models',
+      'Requires Immersive Vehicles base mod',
+    ],
+    install:'Requires Immersive Vehicles base installed first. Download Supercar Pack .jar separately → place in /mods alongside the base mod.',
+    link:'https://www.curseforge.com/minecraft/mc-mods/mts'
+  },
+  {
+    id:'jvsluxury',
+    icon:'👑',
+    name:'JVS Luxury Car Pack',
+    tagline:'BMW, Mercedes, Rolls-Royce, Bentley, Aston Martin for Minecraft',
+    tags:['all','luxury','pack'],
+    loaders:['forge'],
+    free:true,popular:false,
+    versions:['1.12.2','1.16.5','1.18.2'],
+    cars:['BMW 7 Series','BMW M5 Competition','Mercedes S-Class','Rolls-Royce Phantom','Bentley Continental GT','Aston Martin DB11','Porsche Panamera','Range Rover SVAutobiography'],
+    features:[
+      'Luxury sedan and SUV focus',
+      'Interior detail textures on some models',
+      'Chauffeur passenger animations',
+      'Blacked-out window option',
+      'Requires Immersive Vehicles base mod',
+    ],
+    install:'MTS add-on pack — install Immersive Vehicles first, then add JVS pack .jar to /mods folder.',
+    link:'https://www.curseforge.com/minecraft/mc-mods/mts'
+  },
+  {
+    id:'flans',
+    icon:'⚙️',
+    name:"Flan's Mod",
+    tagline:'OG vehicle mod — planes, tanks, and cars since MC 1.6',
+    tags:['all','sports','realistic'],
+    loaders:['forge'],
+    free:true,popular:false,
+    versions:['1.7.10','1.12.2'],
+    cars:['Sports Coupes','Muscle Cars','Off-road Trucks','Classic Hot Rods'],
+    features:[
+      'Military vehicles + civilian cars combined',
+      'Very large content pack library (legacy)',
+      'Customizable vehicle colors via painting',
+      'Multiplayer compatible',
+      'Large legacy player base on 1.12.2 servers',
+    ],
+    install:'Legacy Forge mod — best on MC 1.12.2. Download Flan\'s Mod + content packs. Put content packs in .minecraft/Flan/ folder (not /mods).',
+    link:'https://www.curseforge.com/minecraft/mc-mods/flans-mod'
+  },
+  {
+    id:'vehicular',
+    icon:'🏁',
+    name:'Vehicular',
+    tagline:'Fabric-compatible vehicle mod with modern physics',
+    tags:['all','sports','realistic'],
+    loaders:['fabric'],
+    free:true,popular:false,
+    versions:['1.18.2','1.19.4','1.20.1'],
+    cars:['Sports Car','Off-road SUV','Pickup Truck','City Car'],
+    features:[
+      'Rare Fabric loader support for vehicle mods',
+      'Smooth physics and collisions',
+      'Compatible with Sodium/Iris rendering mods',
+      'Lighter on performance than Forge alternatives',
+      'Growing modpack community',
+    ],
+    install:'Install Fabric loader + Fabric API → download Vehicular .jar → place in /mods. Works with Sodium for better FPS.',
+    link:'https://modrinth.com/mod/vehicular'
+  },
+  {
+    id:'mcf1pack',
+    icon:'🏆',
+    name:'F1 Racing Pack (MTS Add-on)',
+    tagline:'Formula 1 cars — all 10 teams with liveries',
+    tags:['all','sports','supercar','pack'],
+    loaders:['forge'],
+    free:true,popular:true,
+    versions:['1.12.2','1.16.5','1.18.2','1.20.1'],
+    cars:['Red Bull RB19','Ferrari SF-23','Mercedes W14','McLaren MCL60','Aston Martin AMR23','Alpine A523','Williams FW45'],
+    features:[
+      'All 10 F1 teams with accurate 2023 liveries',
+      'Extremely fast — top speed reflects real car ratios',
+      'DRS animation on some models',
+      'Unique V6 hybrid engine sound',
+      'Requires Immersive Vehicles base mod',
+    ],
+    install:'MTS add-on. Place base Immersive Vehicles .jar + F1 Pack .jar in /mods. Best played on a server with a proper F1 circuit map.',
+    link:'https://www.curseforge.com/minecraft/mc-mods/mts'
+  },
+  {
+    id:'betterroads',
+    icon:'🛣️',
+    name:'Better Roads Mod',
+    tagline:'Proper roads, lane markings, highways for your car mods',
+    tags:['all','realistic'],
+    loaders:['forge'],
+    free:true,popular:false,
+    versions:['1.12.2','1.16.5','1.18.2'],
+    cars:[],
+    features:[
+      'Asphalt road blocks with road markings',
+      'Highway lanes, roundabouts, intersections',
+      'Road signs and traffic lights (working)',
+      'Perfectly paired with any vehicle mod',
+      'Essential for city / roleplay servers',
+    ],
+    install:'Standard Forge mod install. No vehicle mod required but pairs perfectly with Immersive Vehicles for a full city driving experience.',
+    link:'https://www.curseforge.com/minecraft/mc-mods/better-roads'
+  },
+  {
+    id:'exnihilo',
+    icon:'🏙️',
+    name:'Transport Simulator (OpenComputers)',
+    tagline:'Full public transport sim — buses, trams, plus personal vehicles',
+    tags:['all','realistic'],
+    loaders:['forge'],
+    free:true,popular:false,
+    versions:['1.12.2','1.16.5'],
+    cars:['City Bus','Articulated Tram','Subway Train','Personal Car'],
+    features:[
+      'Schedule-based bus/tram routes',
+      'Custom vehicle skin support',
+      'Functional door opening/closing animations',
+      'Multiplayer passenger system',
+      'Popular on city RP servers in Asia',
+    ],
+    install:'Forge install. Requires configuration of routes and stops. Check the wiki for setup guide on bus line configuration.',
+    link:'https://www.curseforge.com/minecraft/mc-mods/transport-simulator'
+  },
+  {
+    id:'driveable',
+    icon:'🎮',
+    name:'Driveable Mods (Various)',
+    tagline:'Lightweight single-file car mods — quick install, basic physics',
+    tags:['all','sports'],
+    loaders:['forge','fabric'],
+    free:true,popular:false,
+    versions:['1.16.5','1.18.2','1.19.4','1.20.1'],
+    cars:['Sports Car','Pickup Truck','Jeep','Motorcycle'],
+    features:[
+      'Simple install — no add-on packs needed',
+      'Basic but functional vehicle physics',
+      'Lower file size vs MTS ecosystem',
+      'Good for quick singleplayer use',
+      'Some versions available for Fabric',
+    ],
+    install:'Standard mod install — Forge or Fabric depending on version. Single .jar file, no add-ons required.',
+    link:'https://modrinth.com/mods?q=driveable'
+  },
+  {
+    id:'realracing',
+    icon:'🏎️',
+    name:'Real Racing Pack (MTS Add-on)',
+    tagline:'GT3, GT4 and endurance race cars with liveries',
+    tags:['all','sports','supercar','pack'],
+    loaders:['forge'],
+    free:true,popular:false,
+    versions:['1.12.2','1.16.5','1.18.2'],
+    cars:['Ferrari 488 GT3','Porsche 991 GT3 R','BMW M4 GT3','Mercedes AMG GT3','Lamborghini Huracán GT3 Evo'],
+    features:[
+      'Race-spec versions of road cars',
+      'Roll cage interiors on open models',
+      'Racing slick tire appearance',
+      'Engine sound profiles from real race cars',
+      'Requires Immersive Vehicles base mod',
+    ],
+    install:'MTS add-on pack. Place alongside Immersive Vehicles base .jar in /mods.',
+    link:'https://www.curseforge.com/minecraft/mc-mods/mts'
+  },
+];
+
+let activeFilter = 'all';
+
+function setFilter(f, btn){
+  activeFilter = f;
+  document.querySelectorAll('.tag-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+  filterMods();
+}
+
+function filterMods(){
+  const q = document.getElementById('searchBox').value.toLowerCase();
+  const list = document.getElementById('modsList');
+  list.innerHTML = '';
+  let count = 0;
+  MODS.forEach(m=>{
+    const matchFilter = activeFilter==='all' || m.tags.includes(activeFilter);
+    const matchSearch = !q || m.name.toLowerCase().includes(q) || m.tagline.toLowerCase().includes(q) || m.cars.some(c=>c.toLowerCase().includes(q));
+    if(!matchFilter || !matchSearch) return;
+    count++;
+    list.appendChild(buildCard(m));
+  });
+  document.getElementById('countBadge').textContent = `Showing ${count} mod${count!==1?'s':''}`;
+}
+
+function buildCard(m){
+  const card = document.createElement('div');
+  card.className = 'mod-card';
+  card.id = `mod-${m.id}`;
+
+  const loaderPills = m.loaders.map(l=>`<span class="meta-pill ${l}">${l.charAt(0).toUpperCase()+l.slice(1)}</span>`).join('');
+  const popularPill = m.popular ? '<span class="meta-pill popular">⭐ Popular</span>' : '';
+  const freePill = '<span class="meta-pill free">Free</span>';
+
+  const carChips = m.cars.length ? `
+    <div class="detail-section">
+      <div class="detail-label">Featured Cars</div>
+      <div class="car-chips">${m.cars.map(c=>`<span class="car-chip">${c}</span>`).join('')}</div>
+    </div>
+  ` : '';
+
+  const features = m.features.map(f=>`<div class="feature-item">${f}</div>`).join('');
+  const versions = m.versions.map(v=>`<span class="version-pill">${v}</span>`).join('');
+
+  card.innerHTML = `
+    <div class="mod-header" onclick="toggleCard('${m.id}')">
+      <div class="mod-icon">${m.icon}</div>
+      <div class="mod-info">
+        <div class="mod-name">${m.name}</div>
+        <div class="mod-tagline">${m.tagline}</div>
+        <div class="mod-meta">${loaderPills}${freePill}${popularPill}</div>
+      </div>
+      <button class="expand-btn">›</button>
+    </div>
+    <div class="mod-detail">
+      ${carChips}
+      <div class="detail-section">
+        <div class="detail-label">Key Features</div>
+        <div class="feature-list">${features}</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">MC Versions</div>
+        <div class="mc-versions">${versions}</div>
+      </div>
+      <div class="detail-section">
+        <div class="detail-label">How to Install</div>
+        <div class="install-note">${m.install}</div>
+      </div>
+      <a href="${m.link}" target="_blank" rel="noopener noreferrer" class="link-btn">🔗 View on CurseForge / Modrinth →</a>
+    </div>
+  `;
+  return card;
+}
+
+function toggleCard(id){
+  const card = document.getElementById(`mod-${id}`);
+  card.classList.toggle('open');
+}
+
+filterMods();
+</script>
+</body>
+</html>
